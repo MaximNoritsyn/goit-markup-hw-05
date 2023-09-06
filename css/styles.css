@@ -620,6 +620,7 @@ FOOTER
   display: flex;
   flex-direction: row;
   align-items: baseline;
+  position: relative;
 }
 
 .footer .logo-container {
@@ -650,6 +651,57 @@ FOOTER
 
 .footer .list-socials .icon-container .icon {
   fill: var(--color-light);
+}
+
+.subscribe-thumb {
+  position: absolute;
+  top: 0;
+  right: 15px;
+}
+
+.subscribe-thumb .subscribe-title {
+  margin-bottom: 16px;
+}
+
+.subscribe-thumb .subscribe-input {
+  width: 264px;
+  height: 40px;
+  flex-shrink: 0;
+
+  border-radius: 4px;
+  border: 1px solid var(--color-white-background);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  background-color: transparent;
+
+  margin-right: 24px;
+}
+
+.subscribe-thumb .subscribe-input::placeholder {
+  color: var(--color-white-background);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: 0.48px;
+  padding-left: 16px;
+}
+
+.subscribe-thumb .subscribe-btn {
+  display: inline-flex;
+  padding: 8px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  border-radius: 4px;
+  background: var(--color-primary-brand);
+  color: var(--color-white-background);
+  fill: var(--color-white-background);
+  border-color: transparent;
+}
+
+.subscribe-thumb .subscribe-btn .icon {
+  fill: currentColor;
 }
 
 /*
@@ -733,4 +785,18 @@ Modal window
 .icon-close-container .icon {
   fill: currentColor;
   transition: fill var(--transition-settings);
+}
+
+.modal .container {
+  padding: 72px 24px 0px 24px;
+}
+
+.modal .modal-title {
+  color: var(--color-dark);
+  text-align: center;
+
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+  margin: 0 auto;
 }
