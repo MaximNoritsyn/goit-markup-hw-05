@@ -800,3 +800,63 @@ Modal window
   letter-spacing: 0.32px;
   margin: 0 auto;
 }
+
+.modal-form .label-field {
+  color: var(--color-subtle-text);
+
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.48px;
+  margin-bottom: 4px;
+}
+
+.modal-form .field-container {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.modal-form input,
+.modal-form textarea {
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+}
+
+.modal-form input {
+  width: 360px;
+  height: 40px;
+  padding-left: 38px;
+}
+
+.modal-form textarea {
+  width: 360px;
+  height: 120px;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+}
+
+.modal-form textarea::placeholder {
+  color: rgba(46, 47, 66, 0.4);
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.48px;
+}
+
+.field-container .icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  fill: var(--color-dark);
+}
+
+.modal-form input:focus {
+  border-color: var(--color-primary-brand);
+}
+
+.modal-form .input:focus ~ .icon {
+  fill: var(--color-primary-brand);
+}
