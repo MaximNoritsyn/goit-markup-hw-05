@@ -659,8 +659,16 @@ FOOTER
   right: 15px;
 }
 
+.subscribe-form {
+  display: flex;
+  gap: 24px;
+}
+
 .subscribe-thumb .subscribe-title {
   margin-bottom: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
 .subscribe-thumb .subscribe-input {
@@ -673,7 +681,6 @@ FOOTER
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background-color: transparent;
 
-  margin-right: 24px;
   outline: transparent;
   font-size: 12px;
   font-weight: 400;
@@ -794,7 +801,7 @@ Modal window
 }
 
 .modal .container {
-  padding: 72px 24px 0px 24px;
+  padding: 72px 24px 24px 24px;
 }
 
 .modal .modal-title {
@@ -804,7 +811,7 @@ Modal window
 
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.32px;
+  letter-spacing: 0.02em;
   margin: 0 auto;
   margin-bottom: 16px;
 }
@@ -817,7 +824,7 @@ Modal window
   font-style: normal;
   font-weight: 400;
   line-height: 1.17;
-  letter-spacing: 0.48px;
+  letter-spacing: 0.04em;
   margin-bottom: 4px;
 }
 
@@ -872,7 +879,7 @@ Modal window
 
   font-size: 12px;
   line-height: 1.17;
-  letter-spacing: 0.48px;
+  letter-spacing: 0.04;
 }
 
 .field-container .icon {
@@ -948,5 +955,5 @@ input[type='checkbox']:focus-visible ~ .checkmark {
 
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.64px;
+  letter-spacing: 0.04em;
 }
