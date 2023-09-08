@@ -674,6 +674,13 @@ FOOTER
   background-color: transparent;
 
   margin-right: 24px;
+  outline: transparent;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: 0.48px;
+  color: var(--color-white-background);
+  padding: 8px 16px;
 }
 
 .subscribe-thumb .subscribe-input::placeholder {
@@ -683,10 +690,9 @@ FOOTER
   font-weight: 400;
   line-height: 2;
   letter-spacing: 0.48px;
-  padding-left: 16px;
 }
 
-.subscribe-thumb .subscribe-btn {
+.subscribe-btn {
   display: inline-flex;
   padding: 8px 24px;
   justify-content: center;
@@ -833,6 +839,7 @@ Modal window
   height: 40px;
   padding-left: 38px;
   background-color: transparent;
+  outline: transparent;
 }
 
 .modal-form textarea {
@@ -840,9 +847,24 @@ Modal window
   height: 120px;
   padding: 8px 16px;
   margin-bottom: 8px;
+  outline: transparent;
 
   resize: none;
   background-color: transparent;
+  transition: border-color var(--transition-settings);
+}
+
+.modal-form input:focus,
+.modal-form textarea:focus {
+  border-color: var(--color-primary-brand);
+}
+
+.modal-form input ~ .icon {
+  transition: fill var(--transition-settings);
+}
+
+.modal-form input:focus ~ .icon {
+  fill: var(--color-primary-brand);
 }
 
 .modal-form textarea::placeholder {
@@ -859,14 +881,7 @@ Modal window
   left: 16px;
   transform: translateY(-50%);
   fill: var(--color-dark);
-}
-
-.modal-form input:focus {
-  border-color: var(--color-primary-brand);
-}
-
-.modal-form .input:focus ~ .icon {
-  fill: var(--color-primary-brand);
+  pointer-events: none;
 }
 
 .modal-form .checkmark {
@@ -877,6 +892,7 @@ Modal window
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 3px;
+  transition: border-color var(--transition-settings);
 }
 
 .checkbox-container {
@@ -885,6 +901,7 @@ Modal window
 
 .modal-form .checkmark .icon-checkbox {
   opacity: 0;
+  transition: opacity var(--transition-settings);
 }
 
 input[type='checkbox']:checked ~ .checkmark .icon-checkbox {
@@ -892,6 +909,10 @@ input[type='checkbox']:checked ~ .checkmark .icon-checkbox {
 }
 
 input[type='checkbox']:checked ~ .checkmark {
+  border-color: var(--color-pressed-state);
+}
+
+input[type='checkbox']:focus-visible ~ .checkmark {
   border-color: var(--color-pressed-state);
 }
 
