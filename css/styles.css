@@ -792,6 +792,7 @@ Modal window
 }
 
 .modal .modal-title {
+  display: block;
   color: var(--color-dark);
   text-align: center;
 
@@ -799,9 +800,11 @@ Modal window
   line-height: 1.5;
   letter-spacing: 0.32px;
   margin: 0 auto;
+  margin-bottom: 16px;
 }
 
 .modal-form .label-field {
+  display: block;
   color: var(--color-subtle-text);
 
   font-size: 12px;
@@ -824,17 +827,22 @@ Modal window
   border: 1px solid rgba(46, 47, 66, 0.4);
 }
 
-.modal-form input {
-  width: 360px;
+.modal-form input[type='text'],
+.modal-form input[type='email'] {
+  width: 100%;
   height: 40px;
   padding-left: 38px;
+  background-color: transparent;
 }
 
 .modal-form textarea {
-  width: 360px;
+  width: 100%;
   height: 120px;
   padding: 8px 16px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
+
+  resize: none;
+  background-color: transparent;
 }
 
 .modal-form textarea::placeholder {
@@ -859,4 +867,65 @@ Modal window
 
 .modal-form .input:focus ~ .icon {
   fill: var(--color-primary-brand);
+}
+
+.modal-form .checkmark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 3px;
+}
+
+.checkbox-container {
+  margin-bottom: 24px;
+}
+
+.modal-form .checkmark .icon-checkbox {
+  opacity: 0;
+}
+
+input[type='checkbox']:checked ~ .checkmark .icon-checkbox {
+  opacity: 1;
+}
+
+input[type='checkbox']:checked ~ .checkmark {
+  border-color: var(--color-pressed-state);
+}
+
+.modal-form .checkbox-container .label-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+}
+
+.modal-btn {
+  display: block;
+  padding: 16px 32px;
+  align-items: flex-start;
+  gap: 10px;
+
+  border-radius: 4px;
+  background: var(--color-primary-brand);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+  color: var(--color-white-background);
+
+  border: none;
+  margin: 0 auto;
+}
+
+.modal-btn .btn-name {
+  display: block;
+  width: 105px;
+
+  color: var(--color-white-background);
+  font-size: 16px;
+
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
 }
