@@ -714,10 +714,15 @@ FOOTER
 
   min-width: 165px;
   height: 40px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border: none;
 }
 
 .subscribe-thumb .subscribe-btn .icon {
   fill: currentColor;
+  margin-left: 16px;
 }
 
 /*
@@ -746,6 +751,7 @@ Modal window
   z-index: 1001;
   width: 408px;
   min-height: 584px;
+  padding: 72px 24px 24px 24px;
   transform: translate(-50%, -50%);
 
   border-radius: 4px;
@@ -765,7 +771,6 @@ Modal window
 }
 
 .is-hidden .modal {
-  padding: 72px 24px 24px 24px;
   scale: 0;
 }
 
