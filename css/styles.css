@@ -684,7 +684,7 @@ FOOTER
   outline: transparent;
   font-size: 12px;
   font-weight: 400;
-  line-height: 2;
+  line-height: 1.5;
   letter-spacing: 0.48px;
   color: var(--color-white-background);
   padding: 8px 16px;
@@ -711,6 +711,9 @@ FOOTER
   color: var(--color-white-background);
   fill: var(--color-white-background);
   border-color: transparent;
+
+  min-width: 165px;
+  height: 40px;
 }
 
 .subscribe-thumb .subscribe-btn .icon {
@@ -762,6 +765,7 @@ Modal window
 }
 
 .is-hidden .modal {
+  padding: 72px 24px 24px 24px;
   scale: 0;
 }
 
@@ -798,10 +802,6 @@ Modal window
 .icon-close-container .icon {
   fill: currentColor;
   transition: fill var(--transition-settings);
-}
-
-.modal .container {
-  padding: 72px 24px 24px 24px;
 }
 
 .modal .modal-title {
