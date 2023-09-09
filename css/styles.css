@@ -918,7 +918,7 @@ Modal window
   border-radius: 2px;
   fill: transparent;
   transition: border var(--transition-settings),
-    background-color var(--transition-settings);
+    background-color var(--transition-settings), fill var(--transition-settings);
 }
 
 .checkbox-container {
@@ -936,6 +936,7 @@ input[type='checkbox']:checked ~ .label-field-text .checkmark .icon-checkbox {
 input[type='checkbox']:checked ~ .label-field-text .checkmark {
   border: none;
   background-color: var(--color-pressed-state);
+  fill: var(--color-light);
 }
 
 input[type='checkbox']:focus-visible ~ .checkmark {
