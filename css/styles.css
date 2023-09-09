@@ -842,10 +842,11 @@ Modal window
 }
 
 .modal-form input,
-.modal-form textarea {
+.modal-form .comment-textarea {
   flex-shrink: 0;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
+  transition: border-color var(--transition-settings);
 }
 
 .modal-form input[type='text'],
@@ -857,16 +858,23 @@ Modal window
   outline: transparent;
 }
 
-.modal-form textarea {
+.modal-form .comment-textarea {
   width: 100%;
   height: 120px;
   padding: 8px 16px;
-  margin-bottom: 8px;
   outline: transparent;
 
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
   resize: none;
   background-color: transparent;
   transition: border-color var(--transition-settings);
+}
+
+.field-container.comment {
+  margin-bottom: 16px;
 }
 
 .modal-form input:focus,
@@ -897,6 +905,7 @@ Modal window
   transform: translateY(-50%);
   fill: var(--color-dark);
   pointer-events: none;
+  height: 24px;
 }
 
 .modal-form .checkmark {
@@ -906,7 +915,7 @@ Modal window
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 3px;
+  border-radius: 2px;
   transition: border-color var(--transition-settings);
 }
 
@@ -919,12 +928,13 @@ Modal window
   transition: opacity var(--transition-settings);
 }
 
-input[type='checkbox']:checked ~ .checkmark .icon-checkbox {
+input[type='checkbox']:checked ~ .label-field-text .checkmark .icon-checkbox {
   opacity: 1;
 }
 
-input[type='checkbox']:checked ~ .checkmark {
+input[type='checkbox']:checked ~ .label-field-text .checkmark {
   border-color: var(--color-pressed-state);
+  background-color: var(--color-pressed-state);
 }
 
 input[type='checkbox']:focus-visible ~ .checkmark {
