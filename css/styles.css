@@ -834,8 +834,11 @@ Modal window
 }
 
 .modal-form .field-container {
-  position: relative;
   margin-bottom: 8px;
+}
+
+.modal-form .input-container {
+  position: relative;
 }
 
 .modal-form input,
