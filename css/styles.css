@@ -916,7 +916,9 @@ Modal window
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
-  transition: border-color var(--transition-settings);
+  fill: transparent;
+  transition: border var(--transition-settings),
+    background-color var(--transition-settings);
 }
 
 .checkbox-container {
@@ -924,16 +926,15 @@ Modal window
 }
 
 .modal-form .checkmark .icon-checkbox {
-  opacity: 0;
-  transition: opacity var(--transition-settings);
+  transition: fill var(--transition-settings);
 }
 
 input[type='checkbox']:checked ~ .label-field-text .checkmark .icon-checkbox {
-  opacity: 1;
+  fill: var(--color-light);
 }
 
 input[type='checkbox']:checked ~ .label-field-text .checkmark {
-  border-color: var(--color-pressed-state);
+  border: none;
   background-color: var(--color-pressed-state);
 }
 
@@ -942,10 +943,14 @@ input[type='checkbox']:focus-visible ~ .checkmark {
 }
 
 .modal-form .checkbox-container .label-field {
-  display: flex;
+  display: block;
   align-items: center;
   gap: 8px;
   user-select: none;
+}
+
+.privacy-link {
+  color: var(--color-primary-brand);
 }
 
 .modal-btn {
@@ -962,6 +967,12 @@ input[type='checkbox']:focus-visible ~ .checkmark {
 
   border: none;
   margin: 0 auto;
+  min-width: 169px;
+
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  transition: background-color var(--transition-settings);
 }
 
 .modal-btn .btn-name {
@@ -970,8 +981,4 @@ input[type='checkbox']:focus-visible ~ .checkmark {
 
   color: var(--color-white-background);
   font-size: 16px;
-
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
 }
